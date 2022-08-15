@@ -1,0 +1,101 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1;
+    text-align: left;
+  }
+  
+  .heading{
+    background: rgb(205, 73, 95);
+    text-align: center;
+    border: solid;
+    resize: none;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  .currentDay{
+    text-align: center;
+    border: none;
+    color: black;
+    font-size: 40px;
+  }
+  
+  .jumbotron {
+    text-align: center;
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+  }
+  
+  .city-search{
+    text-align: center;
+    border-radius: 15px;
+    border-left: 1px solid black;
+    color: white;
+  }
+
+  .prev-search{
+    text-align: center;
+    border-radius: 15px;
+    border-left: 1px solid black;
+    color: white;
+  }
+  
+  .row {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 1px solid white;
+  }
+
+  .cityArea {
+    border-top: 10mm solid white;
+    border-left: 5mm solid white;
+    height: 700px;
+  }
+  
+  .searchBtn {
+    background-color: #010b10;
+    color: white;
+  }
+  
+  .searchBtn i:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
+
+  #forecastHeading {
+    visibility: hidden;
+    background-color: aqua;
+    font-weight: bold;
+  }
+  
+  /* formatting for multiple device sizes */
+  /* mobile phone */
+  @media screen and (min-width: 768px){
+    header {
+        justify-content: space-between;
+    }
+    
+    #mainSection {
+        margin: 75px 20% 20px;
+    }
+    #mainBody {
+        text-align: left;
+    }
+  }
+  
+  /* tablet */
+  @media screen and (min-width: 992px){
+    header {
+        justify-content: space-between;
+    }
+    #mainSection {
+        margin: 75px 20% 20px;
+    }
+    #mainBody {
+        text-align: left;
+    }
+  }

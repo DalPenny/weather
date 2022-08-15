@@ -45,10 +45,10 @@ Used Javascript, html and css and open weather api to build this weather dashboa
 The page was styled so that it could fit in multiple device size (phone, tablet, laptop/desktop) 
 
 
-## Link to application: 
+## Link to application: https://dalpenny.github.io/weather/
 
    
-## Link to github: 
+## Link to github: https://github.com/DalPenny/weather
  
 
 ## Links to screenshots of deployed application
