@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Page styled with bootstrap -->
+    <link 
+        rel="stylesheet" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link 
+        rel="stylesheet" 
+        href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"    
+    />
+    <!-- stylesheet for this application -->
+    <link 
+        rel="stylesheet" 
+        href="./assets/css/style.css"
+    />
+    <!-- website title -->
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <!-- page header and current date -->
+        <h1 class="display-4 heading">Weather Dashboard</h1>
+        <p id="currentDay" class="lead currentDay"></p>
+    </header>
+    <div class="row">
+        <!-- column on the left to search for cities -->
+        <section class="col-12 col-lg-3 card text-white bg-primary mb-3 cityArea">
+            <section>
+                <form id="citySearch" class="row justify-content-center">
+                    <h2>Search for a City:</h2><br>
+                    <input type="search" placeholder="Example: Maine">
+                    <button class="btn searchBtn">Search</button>
+                </form>
+            </section>
+            <section id="prevCity" class="row justify-content-center"></section>
+        </section>
+        <!-- current weather for the selected city -->
+        <main class="col-12 col-lg-9">
+            <section id="currentWeather">
+                <section class="row">
+                    <h2 class="col-auto"></h2>
+                    <img class="col-auto">
+                </section>
+                <P></P>
+                <P></P>
+                <P></P>
+                <P></P>
+            </section>
+            
+            <h4 id="forecastHeading">5 Day Forecast:</h2>
+            <!-- Add more code -->
+        </main>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- javascript file -->
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
