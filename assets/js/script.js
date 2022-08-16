@@ -49,7 +49,7 @@ function getData(event) {
     }
     city = city.toUpperCase();
     if(!city) {
-        invalidInput();
+        invalidCity();
         return;
     }
     var requestUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=5911de58d825147b5fa891cd55dfb5c0&units=metric`;
@@ -68,11 +68,11 @@ function getData(event) {
                     })
                     .then(function (data) {
                         displayWeather(data, city);    
-                        // displayForecast(data);
+                        forecastFiveday(data);
                         saveCity(city);   
                     });
             } else {
-                invalidInput();
+                invalidCity();
             }
         });
 }
@@ -105,6 +105,29 @@ function displayWeather(data, city) {
     }
     
 }
+
+// Displays the 5 day forecast
+var today = dayjs();
+function forecastFiveday(data) {
+    forecastTitle.css("visibility", "visible");
+    for(var i = 0; i < 5; i++) {
+        var date = forecast.children().eq(i).children().eq(0);
+        var conditions = forecast.children().eq(i).children("img");
+        var temp = forecast.children().eq(i).children().eq(2);
+        var wind = forecast.children().eq(i).children().eq(3);
+        var humidity = forecast.children().eq(i).children().eq(4);
+
+        forecast.children().eq(i).addClass("card text-white fcastArea mb-3 mx-1")
+    
+        var index = i + 1;
+        date.text(today.add((i + 1), "d").format("MM/DD/YYYY"));
+        conditions.attr("src",`https://openweathermap.org/img/w/${data.daily[index].weather[0].icon}.png`);
+        temp.text(`Temp: ${data.daily[index].temp.day}°C`);
+        wind.text(`Wind: ${Math.round(data.daily[index].wind_speed * 3.6)} kph`);
+        humidity.text(`Humidity: ${data.daily[index].humidity}%`);
+    }
+}
+
 // if there are any cities saved locally
 // populate them in a list
 function saveCity(city) {
@@ -137,6 +160,10 @@ function updatePrev() {
             prevCities.children().eq(i).text(cityList[i]);
         }
     }    
+}
+
+function invalidCity(){
+    alert("Please enter a valid city ❌");
 }
 
 begin();
