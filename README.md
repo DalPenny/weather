@@ -51,6 +51,7 @@ The page was styled so that it could fit in multiple device size (phone, tablet,
 ## Link to github: https://github.com/DalPenny/weather
  
 
-## Links to screenshots of deployed application
+## Links to screenshots of deployed application:     https://github.com/DalPenny/weather/blob/main/weather.jpg
+
 ￼￼
  
